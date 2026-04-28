@@ -1,0 +1,353 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  /* font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+      Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  /* background-color: #141c24ff; */
+  color: "#B7C7D7";
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+.vl-header-image {
+  text-align: center;
+}
+
+.vl-main-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Styling for the venue cards */
+.vl-venue-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap cards when screen size is small */
+  gap: 40px; /* Space between cards */
+  justify-content: space-between; /* Align cards with equal spacing in each row */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in total width/height */
+  background-color: #141c24ff; /* Light background for the container */
+  padding-left: 10rem;
+  padding-right: 10rem;
+  text-align: left;
+}
+
+.vl-venue-container .vl-card {
+  border: 1px solid #2c3d4f; /* Light gray border */
+  /* Rounded corners */
+  overflow: hidden; /* Clip content that overflows */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #c69963; /* White background for cards */
+  width: calc(
+    50% - 20px
+  ); /* 50% width minus the gap to ensure 2 cards per row */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  font-family: Noto Sans Display, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif; /* Clean typography */
+  text-align: left;
+  box-sizing: border-box;
+  bottom: 10px;
+}
+
+.vl-venue-container .vl-card p {
+  text-align: left;
+}
+/* Card hover effect */
+.vl-card:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Image in the card */
+.vl-card-image {
+  width: 100%; /* Full width of the card */
+  height: 450px; /* Fixed height for consistent appearance */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-bottom: 1px solid #ddd; /* Divider between image and content */
+}
+
+/* Card content area */
+.vl-card-content {
+  padding: 24px; /* Inner spacing */
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Card title styling */
+.vl-card-title {
+  font-size: 3rem; /* Slightly larger font size for the title */
+  font-weight: bold;
+  margin-bottom: 8px; /* Space below the title */
+  color: white; /* Dark red to match theme */
+}
+
+/* Card text styling */
+.vl-card-text {
+  font-size: 2rem; /* Standard font size for text */
+  margin-bottom: 15px; /* Space below the text */
+  color: #333; /* Dark gray text */
+}
+
+/* Card description styling */
+.vl-card-description {
+  font-size: 2rem; /* Slightly smaller font size for descriptions */
+  color: #2a2b2f; /* Medium gray text */
+  line-height: 1.5; /* Improve readability */
+  margin-bottom: 24px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .vl-card {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+/* IMMERSIVE CONTAINER */
+.vl-immersive-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c69963;
+
+  padding: 48px;
+  height: 300px;
+  color: white;
+  font-family: "Arial", sans-serif;
+  margin-top: -40px;
+}
+
+.vl-immersive-content {
+  flex: 1;
+  padding: 24px;
+}
+
+.vl-immersive-content h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.vl-immersive-content p {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: white !important;
+}
+
+.vl-immersive-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  font-size: 1.75rem;
+  width: 100px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.vl-separator-container {
+  /* Center the separator */
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c69963;
+  /* #c69963 */
+  padding: 48px;
+  height: 20px;
+  margin-top: -120px;
+}
+
+.vl-separator-image {
+  max-width: 100%; /* Ensure the image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+ion-icon {
+  color: #c69963;
+  font-size: 28px;
+}
+
+ion-icon:hover {
+  color: #b7c7d7;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  padding: 20px 32px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #141c24ff;
+  width: 100%;
+}
+
+.nav-links {
+  text-decoration: none !important;
+  color: #c69963;
+}
+
+.nav-links:hover {
+  color: #b7c7d7;
+}
+
+.nav-events {
+  display: flex;
+  align-items: center;
+  gap: 62px;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vl-totalspace {
+  margin-top: 25px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 0px;
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 1px 6px;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.vl-totalspace {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  padding-top: 8px;
+  background-color: #f4ece1;
+}
+
+.vl-totalspace span {
+  display: inline-block;
+}
+
+.vl-totalspace strong {
+  color: #7a4606; /* Dark red to match theme */
+}
+.eventspace {
+  font-family: Arial, sans-serif;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.reset {
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 700px;
+  font-size: 1.5rem;
+}
+.eventspace h1 {
+  color: #7a4606; /* Dark red to match theme */
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+.dropdown {
+  display: flex;
+  gap: 10px;
+  margin: 0px;
+}
+.dropdown-btn select {
+  padding: 10px;
+  border: 1px solid #7a4606;
+  color: #7a4606;
+  font-size: 16px;
+  cursor: pointer;
+}
+.dropdown-btn select:hover {
+  background-color: #7a4606;
+  color: #fff;
+}
+.dropdown-btn select:focus {
+  background-color: #7a4606;
+  color: #fff;
+  outline: none;
+}
+.dropdown-btn select option {
+  background-color: #fff;
+  color: #7a4606;
+}
+.dropdown-btn select option:hover {
+  background-color: #7a4606;
+  color: #fff;
+}
+
+.vl-button {
+  /* display: flex; */
+  align-items: center;
+  border: 1px solid #9b5f15; /* Maroon color */
+  padding: 14px 20px;
+  background-color: white !important;
+  cursor: pointer;
+  border-radius: 2px;
+  width: 600px;
+  color: #b06203 !important; /* Initial text color */
+  text-decoration: none;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  transition: all 0.3s;
+}
+
+.vl-button:hover {
+  color: white !important; /* Text color on hover */
+  background-color: #693c05 !important; /* Background color on hover */
+}
+
+.vl-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #7a4606;
+}
+.vl-button:hover .icon {
+  color: #fff; /* Icon color on hover */
+}
+
+.vl-card-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: auto;
+  text-align: center;
+}

@@ -1,0 +1,373 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  /* font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  background-color: #141c24ff;
+  color: "#B7C7D7";
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+.main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+}
+
+.room-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.guest-selection {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #b7c7d7;
+  font-weight: 500;
+  background-color: inherit;
+  border: 0;
+  border-top: 1px solid #2c3d4f;
+  border-bottom: 1px solid #2c3d4f;
+  cursor: pointer;
+}
+
+.guest-selection button:first-child {
+  border-left: 1px solid #2c3d4f;
+}
+
+.guest-selection button:last-child {
+  border-right: 1px solid #2c3d4f;
+}
+
+.btn:hover {
+  background-color: #3c546cff;
+}
+
+.selected {
+  background-color: #3c546cff;
+}
+
+.rooms-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.room-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 1px solid #2c3d4f;
+}
+
+.room-card img {
+  display: block;
+  width: 100%;
+  height: 248px;
+  object-fit: cover;
+  object-position: center;
+  overflow-x: hidden;
+}
+
+.room-card-info {
+  display: flex;
+  flex-direction: column;
+  color: #b7c7d7;
+}
+
+.room-card-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px;
+  padding-bottom: 8px;
+}
+
+.room-card-info-details h3 {
+  color: #c69963;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 2rem;
+  align-self: self-start;
+}
+
+.room-car-guestnum {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  gap: 16px;
+  color: #b7c7d7;
+}
+
+.room-car-guestnum svg {
+  height: 24px;
+}
+
+.room-card-price {
+  align-self: flex-end;
+  font-size: 20px;
+  margin-right: 8px;
+  font-weight: 400;
+}
+
+.room-card-btn {
+  border-top: 1px solid #2c3d4f;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+.details-btn {
+  padding: 16px;
+  align-self: flex-end;
+  border: 0;
+  border-left: 1px solid #2c3d4f;
+}
+
+.details-btn:hover {
+  color: #141c24ff;
+  background-color: #c69963;
+}
+
+.single-room {
+  display: flex;
+  width: 120rem;
+}
+
+.single-room img {
+  position: relative;
+  width: auto;
+  height: 500px;
+}
+
+.single-room-heading {
+  /* width: 364px; */
+  width: 500px;
+  padding: 0 0 0 18px;
+  background-color: #141c24ff;
+  transform: translate(-58%, -18%);
+}
+
+.single-room-heading h1 {
+  font-size: 68px;
+  color: #f4ece1;
+}
+
+.single-room-details {
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+  margin-left: 0;
+  border: 1px solid #2c3d4f;
+  padding: 28px;
+  padding-left: 48px;
+}
+
+.single-room-details span {
+  color: #b7c7d7;
+  font-size: 18px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 500;
+}
+
+li {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+ion-icon {
+  color: #3c546c;
+  font-size: 20px;
+}
+
+.single-room-calendars-total-price {
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  border: 1px solid #2c3d4f;
+  /* padding: 48px 48px 0 0; */
+  padding-bottom: 0;
+}
+
+.single-room-price-details {
+  background-color: #c69963;
+  height: 62px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.single-room-guests-input {
+  background-color: #1b2631;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* padding-top: 48px; */
+  justify-content: space-between;
+}
+
+.single-room-calendars-total-price,
+.single-room-guests-input {
+  flex: 1;
+}
+
+label {
+  color: #b7c7d7;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+select {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #b7c7d7;
+  color: #1b2631;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.single-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-room-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.single-room-btns button {
+  font-family: inherit;
+  background-color: inherit;
+  border: 0;
+  margin-bottom: 1px;
+  height: 62px;
+  width: 50%;
+  font-size: 18px;
+  color: #b7c7d7;
+  border-top: 1px solid #2c3d4f;
+  border-left: 1px solid #2c3d4f;
+  cursor: pointer;
+}
+
+.single-room-btns button:hover {
+  color: #141c24ff;
+  background-color: #c69963;
+}
+
+/* /////////////////////////////////////////////////////// */
+/* CALENDAR CSS */
+
+/* CustomDatePicker.css */
+.grayed-out {
+  opacity: 0.25;
+}
+
+.custom-calendar {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.react-datepicker__day,
+.react-datepicker__day-name {
+  width: 3rem;
+  line-height: 3rem;
+}
+
+.custom-calendar.react-datepicker {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #141c24;
+  border: 0;
+}
+
+.custom-calendar .react-datepicker__header {
+  background-color: #141c24;
+  color: #b7c7d7;
+  border: 0;
+}
+
+.custom-calendar .react-datepicker__day,
+.custom-calendar .react-datepicker__day-name {
+  width: 3rem;
+  line-height: 3rem;
+  background-color: #141c24;
+  color: #b7c7d7;
+}
+
+.custom-calendar .react-datepicker__day--selected {
+  background-color: #c69963;
+  border-radius: 50%;
+  color: #b7c7d7;
+}
+
+.custom-calendar .react-datepicker__day:hover {
+  background-color: #b7c7d7;
+  border-radius: 50%;
+  color: #b7c7d7;
+}
+
+.custom-calendar .react-datepicker__current-month {
+  font-size: 2rem;
+  color: #b7c7d7;
+}
+
+.custom-calendar .react-datepicker__year-read-view--down-arrow,
+.custom-calendar .react-datepicker__month-read-view--down-arrow {
+  font-size: 0.6rem;
+  color: #b7c7d7;
+}
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
+*/
+
+/* COLORS  */
+/* 
+    Background color : #141c24ff (without transparency)
+                       #141C247F (with 50% transparency)
+
+    Border: #2c3d4f
+
+
+    Text Color: #B7C7D7
+    Text Light Color: #
+
+    Heading: #f4ece1
+
+
+    Active button color : #3C546CFF                   
+    Hover button color  : #3C546CFF    
+    Hover button color  : #c69963
+    
+    
+ */

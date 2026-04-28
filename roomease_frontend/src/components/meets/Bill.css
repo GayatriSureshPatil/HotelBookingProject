@@ -1,0 +1,247 @@
+/* Adding a blurred background using ::before */
+.bill-container::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  filter: blur(5px); /* Apply blur effect */
+  z-index: -1; /* Ensures it stays behind the content */
+}
+
+.bill-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.invoice-image {
+  width: 100px; /* You can adjust this as needed */
+  height: auto;
+}
+
+.bill-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.bill-details {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: -50px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.bill-details p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+.bill-details strong {
+  color: #000;
+}
+
+.bill-details button {
+  width: 100%;
+  padding: 12px;
+  background: #cc8c3e;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.bill-details button:hover {
+  background-color: #c78a40;
+}
+
+.bill-details button:active {
+  background-color: #cd7305;
+}
+
+.bill-container {
+  font-family: Arial, sans-serif;
+  max-width: 680px;
+  margin: 20px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bill-header {
+  position: relative;
+  width: 100%;
+  height: 160px;
+}
+
+.background-image img {
+  background: linear-gradient(rgba(82, 82, 82, 0.6), rgba(48, 48, 48, 0.6)),
+    url("../src/assets/cabin.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+  position: absolute;
+  top: -1rem;
+  left: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  color: #cc8c3e !important;
+}
+
+.hotel-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #cc8c3e;
+}
+
+.hotel-address,
+.hotel-contact {
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+.invoice-header,
+.order-details {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  text-align: center;
+}
+
+.invoice-table th,
+.invoice-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.pricing {
+  margin-top: 10px;
+}
+thead tr {
+  border-bottom: 1px solid #cc8c3e; /* Adds the horizontal line after header row */
+}
+.custom-hr {
+  border: none; /* Remove default border */
+  height: 1px; /* Set thickness */
+  background-color: #cc8c3e; /* Apply custom color */
+  margin: 10px 0; /* Add spacing */
+}
+
+.text-left,
+p,
+h1 {
+  text-align: left;
+  flex: 1;
+  margin-top: 10px;
+}
+
+.text-right {
+  text-align: right;
+  flex: 1;
+  margin-right: -15rem;
+}
+
+.pricing p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-payable {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.download-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #cc8c3e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.download-btn:hover {
+  background-color: #cd7305;
+}
+@media (max-width: 768px) {
+  .bill-container {
+    padding: 1rem;
+  }
+
+  .bill-details {
+    padding: 1.5rem;
+  }
+
+  .bill-details p {
+    font-size: 1rem;
+  }
+
+  .bill-details button {
+    font-size: 1rem;
+  }
+}
+.hidden-for-pdf {
+  display: none !important;
+}
+
+.bill-header {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #f5f3f3; /* Ensuring background remains white */
+  padding: 20px; /* Adding padding for spacing */
+}
+
+.bill-details {
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto; /* Centering */
+}
+
+.bill-container {
+  align-items: center;
+  min-height: 60vh;
+  position: relative;
+}
+
+.whole-bill {
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensures it stays behind the content */
+}

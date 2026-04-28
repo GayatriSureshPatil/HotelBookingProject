@@ -1,0 +1,157 @@
+/* Overall container for centering the card */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  /* font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+  font-family: "Josefin Sans", sans-serif !important;
+  font-style: normal;
+  background-color: #141c24ff;
+  color: "#B7C7D7";
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+.lf-card-container {
+  font-family: inherit;
+  display: flex;
+  width: 60%;
+  margin: 50px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 540px;
+  background-color: #141c24;
+}
+
+.lf-card-left {
+  width: 90%;
+  height: 100%;
+}
+
+.lf-card-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styling for the card */
+.lf-card-right {
+  background-color: #1e2833; /* Slightly lighter for contrast */
+  border-radius: 8px;
+  padding: 100px 100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Styling for the form elements */
+.lf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lf-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 16px;
+  color: #333; /* Dark gray for input text */
+  background-color: #fff; /* White background for inputs */
+}
+
+.lf-input:focus {
+  outline: none;
+  border: 1px solid #c69963; /* Focus color matches button theme */
+  box-shadow: 0 0 5px #c69963;
+}
+
+/* Button styling */
+.lf-btn {
+  padding: 10px;
+  background-color: #c69963; /* Ochre color for the button */
+  color: #141c24; /* Dark color for text */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* Title and Label Styling */
+.lf-card-right h2 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #c69963; /* Change title color to golden for better contrast */
+  text-transform: uppercase;
+  font-size: 42px;
+  margin-bottom: 60px; /* Added spacing below title */
+}
+
+.lf-label {
+  color: #fff; /* Light color for labels */
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.lf-btn:hover {
+  background-color: #b38253; /* Darker shade of ochre when hovered */
+  transform: scale(1.05); /* Slight enlargement for hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Styling for messages */
+.lf-p {
+  margin-top: 10px;
+  color: white; /* Softer red for error message */
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Styling for SignUp link */
+.lf-sign-in-link {
+  color: white; /* Ochre color for the link */
+  cursor: pointer;
+  text-decoration: none; /* No underline initially */
+  font-weight: bold;
+  color: #b38253;
+  transition: all 0.3s;
+}
+
+.lf-sign-in-link:hover {
+  color: #ccc; /* Darker ochre color when hovered */
+  text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .lf-card {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .lf-input {
+    padding: 8px;
+  }
+
+  .lf-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

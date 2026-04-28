@@ -1,0 +1,60 @@
+/* CALENDAR CSS */
+
+/* CustomDatePicker.css */
+.grayed-out {
+    opacity: 0.25;
+  }
+  
+  .custom-calendar {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  
+  .react-datepicker__day,
+  .react-datepicker__day-name {
+    width: 3rem;
+    line-height: 3rem;
+  }
+  
+  .custom-calendar.react-datepicker {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #141c24;
+    border: 0;
+  }
+  
+  .custom-calendar .react-datepicker__header {
+    background-color: #141c24;
+    color: #b7c7d7;
+    border: 0;
+  }
+  
+  .custom-calendar .react-datepicker__day,
+  .custom-calendar .react-datepicker__day-name {
+    width: 3rem;
+    line-height: 3rem;
+    background-color: #141c24;
+    color: #b7c7d7;
+  }
+  
+  .custom-calendar .react-datepicker__day--selected {
+    background-color: #c69963;
+    border-radius: 50%;
+    color: #b7c7d7;
+  }
+  
+  .custom-calendar .react-datepicker__day:hover {
+    background-color: #b7c7d7;
+    border-radius: 50%;
+    color: #b7c7d7;
+  }
+  
+  .custom-calendar .react-datepicker__current-month {
+    font-size: 2rem;
+    color: #b7c7d7;
+  }
+  
+  .custom-calendar .react-datepicker__year-read-view--down-arrow,
+  .custom-calendar .react-datepicker__month-read-view--down-arrow {
+    font-size: 0.6rem;
+    color: #b7c7d7;
+  }

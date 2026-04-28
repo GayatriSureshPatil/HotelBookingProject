@@ -1,0 +1,144 @@
+/* Main Container */
+.bill_myroom-container {
+  font-family: "Poppins", sans-serif;
+  width: 60%;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Title and Address */
+.bill_myroom-title {
+  color: #c69963;
+  font-size: 30px; /* Increased the font size */
+  margin-bottom: 10px;
+}
+
+.bill_myroom-address {
+  font-size: 16px; /* Increased font size */
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Invoice & Room Info Sections */
+.bill_myroom-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.bill_myroom-info,
+.bill_myroom-room-info {
+  width: 48%;
+  font-size: 16px; /* Increased font size */
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Payment Details Section */
+.bill_myroom-payment {
+  margin-top: 30px;
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bill_myroom-payment h3 {
+  text-align: center;
+  color: #c69963;
+  margin-bottom: 10px;
+}
+
+.bill_myroom-payment table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.bill_myroom-payment table td {
+  padding: 15px; /* Increased padding for better spacing */
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 16px; /* Increased font size */
+}
+
+.bill_myroom-payment table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.bill_myroom-payment td:first-child {
+  font-weight: bold;
+}
+
+/* Footer & Buttons */
+.bill_myroom-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bill_myroom-save-btn,
+.bill_myroom-download-btn {
+  background: #c69963;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px; /* Increased font size */
+  margin: 10px;
+  transition: background 0.3s ease;
+}
+
+.bill_myroom-save-btn:hover,
+.bill_myroom-download-btn:hover {
+  background: #a67c49;
+}
+
+.bill_myroom-download-btn:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* ✅ Popup Notification */
+/* Success Popup */
+.bill_myroom_popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #28a745;
+  color: rgb(60, 41, 41);
+  padding: 15px 25px; /* Increased padding */
+  border-radius: 5px;
+  font-size: 18px; /* Increased font size */
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s ease-in-out;
+}
+
+/* Popup Animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+}

@@ -1,0 +1,379 @@
+/* =========================================================
+   Dynamic Pricing Styles — RoomEase
+   ========================================================= */
+
+/* ── Pricing Badge on Room Cards ─────────────────────────── */
+.dp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.dp-badge.increase {
+  background: rgba(220, 85, 60, 0.18);
+  color: #ff7a5a;
+  border: 1px solid rgba(220, 85, 60, 0.35);
+}
+.dp-badge.decrease {
+  background: rgba(56, 200, 120, 0.15);
+  color: #3ecf8e;
+  border: 1px solid rgba(56, 200, 120, 0.30);
+}
+.dp-badge.neutral {
+  background: rgba(183, 199, 215, 0.12);
+  color: #b7c7d7;
+  border: 1px solid rgba(183, 199, 215, 0.25);
+}
+
+/* Crossed-out base price */
+.dp-base-price {
+  font-size: 14px;
+  color: #5e7a92;
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+
+/* ── Pricing Breakdown Panel ─────────────────────────────── */
+.dp-panel {
+  background: #0f1820;
+  border: 1px solid #2c3d4f;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-top: 16px;
+  max-width: 100%;
+}
+.dp-panel-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #c69963;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Reasons list */
+.dp-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.dp-reason-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #141c24;
+  border-radius: 5px;
+  border-left: 3px solid transparent;
+  font-size: 13px;
+  gap: 10px;
+}
+.dp-reason-item.increase { border-left-color: #ff7a5a; }
+.dp-reason-item.decrease { border-left-color: #3ecf8e; }
+.dp-reason-item.neutral  { border-left-color: #5e7a92; }
+
+.dp-reason-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+.dp-reason-icon { font-size: 16px; }
+.dp-reason-factor {
+  font-weight: 600;
+  color: #d0dce8;
+  font-size: 13px;
+}
+.dp-reason-desc {
+  color: #6d8a9e;
+  font-size: 11px;
+  margin-top: 1px;
+}
+.dp-reason-impact {
+  font-weight: 700;
+  font-size: 13px;
+  min-width: 52px;
+  text-align: right;
+}
+.dp-reason-item.increase .dp-reason-impact { color: #ff7a5a; }
+.dp-reason-item.decrease .dp-reason-impact { color: #3ecf8e; }
+.dp-reason-item.neutral  .dp-reason-impact { color: #5e7a92; }
+
+/* Step-by-step breakdown table */
+.dp-breakdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.dp-breakdown-table th {
+  color: #5e7a92;
+  font-weight: 600;
+  text-align: left;
+  padding: 6px 10px;
+  border-bottom: 1px solid #1e2d3d;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.dp-breakdown-table td {
+  padding: 6px 10px;
+  color: #b7c7d7;
+  border-bottom: 1px solid #141c24;
+}
+.dp-breakdown-table tr:last-child td {
+  font-weight: 700;
+  color: #c69963;
+  border-bottom: none;
+}
+
+/* Final price summary row */
+.dp-final-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #2c3d4f;
+}
+.dp-final-label {
+  font-size: 13px;
+  color: #6d8a9e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.dp-final-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c69963;
+}
+.dp-percent-tag {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.dp-percent-tag.up   { background: rgba(220,85,60,0.2);  color: #ff7a5a; }
+.dp-percent-tag.down { background: rgba(56,200,120,0.15); color: #3ecf8e; }
+.dp-percent-tag.flat { background: rgba(183,199,215,0.1); color: #b7c7d7; }
+
+/* Toggle button */
+.dp-toggle-btn {
+  background: none;
+  border: 1px solid #2c3d4f;
+  color: #b7c7d7;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+}
+.dp-toggle-btn:hover {
+  background: #1e2d3d;
+  border-color: #c69963;
+  color: #c69963;
+}
+
+/* ── Admin Pricing Panel ─────────────────────────────────── */
+.admin-pricing-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 22, 0.80);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.admin-pricing-modal {
+  background: #0f1820;
+  border: 1px solid #2c3d4f;
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+}
+.admin-pricing-modal h2 {
+  color: #c69963;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.admin-pricing-modal p.subtitle {
+  color: #5e7a92;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.admin-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.admin-form-group.full-width {
+  grid-column: 1 / -1;
+}
+.admin-form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6d8a9e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+.admin-form-group input,
+.admin-form-group select {
+  background: #141c24;
+  border: 1px solid #2c3d4f;
+  border-radius: 5px;
+  color: #b7c7d7;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.admin-form-group input:focus,
+.admin-form-group select:focus {
+  outline: none;
+  border-color: #c69963;
+}
+.admin-form-group .hint {
+  font-size: 11px;
+  color: #3e5568;
+}
+
+/* Toggle switch */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #141c24;
+  border: 1px solid #2c3d4f;
+  border-radius: 6px;
+}
+.toggle-row label { font-size: 13px; color: #b7c7d7; margin: 0; }
+.toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+}
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: #2c3d4f;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.toggle-slider:before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: #b7c7d7;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.toggle-switch input:checked + .toggle-slider { background: #c69963; }
+.toggle-switch input:checked + .toggle-slider:before { transform: translateX(20px); }
+
+.admin-modal-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+.btn-admin-save {
+  background: #c69963;
+  color: #141c24;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-admin-save:hover { background: #d4ad7c; }
+.btn-admin-cancel {
+  background: none;
+  color: #b7c7d7;
+  border: 1px solid #2c3d4f;
+  padding: 10px 24px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-admin-cancel:hover { border-color: #b7c7d7; }
+
+/* Occupancy bars */
+.occ-bar-wrap { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.occ-bar-track {
+  flex: 1;
+  height: 8px;
+  background: #1e2d3d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.occ-bar-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+.occ-bar-fill.high   { background: #ff7a5a; }
+.occ-bar-fill.mid    { background: #f4c06f; }
+.occ-bar-fill.low    { background: #3ecf8e; }
+.occ-bar-label { font-size: 12px; color: #6d8a9e; min-width: 36px; text-align: right; }
+
+.admin-open-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: linear-gradient(135deg, #c69963, #b07840);
+  color: #141c24;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 22px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(198,153,99,0.35);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.admin-open-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(198,153,99,0.45);
+}

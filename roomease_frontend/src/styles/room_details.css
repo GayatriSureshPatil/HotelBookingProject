@@ -1,0 +1,270 @@
+/* General Styling */
+.myroom_p-room-details-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Room Information */
+.myroom_p-room-info-container {
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+/* Card Styling - Increased Width */
+.myroom_p-card {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background-color: #2b3645;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 70%; /* Full width */
+  align-items: center;
+  margin-left: 0;
+}
+
+/* Room Image */
+.myroom_p-room-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.myroom_p-room-image {
+  width: 450px;
+  height: 320px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Room Info */
+.myroom_p-room-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.myroom_p-room-info h2 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #c69963;
+}
+
+.myroom_p-room-info p {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+/* Price Summary - Positioned at Right */
+.myroom_p-price-summary {
+  background-color: #2b3645;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  right: 20px;
+  top: 124px;
+}
+
+.myroom_p-price-summary h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #c69963;
+}
+
+.myroom_p-price-summary p {
+  padding: 12px;
+  font-size: 1.8rem;
+  margin: 12px 0;
+}
+
+/* Pay Now Button */
+.myroom_p-price-summary button {
+  background-color: transparent;
+  color: #ebe0db;
+  padding: 18px 35px;
+  border: 2px solid #dfd0c9;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.myroom_p-price-summary button:hover {
+  background-color: #c69963;
+  color: #fff;
+}
+
+/* Guest Details - Form Container - Same Width as Room Details */
+.myroom_p-guest-details-container {
+  width: 75%;
+  background-color: #1b2631;
+  padding: 50px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contact Information Title */
+.myroom_p-guest-details-container h2 {
+  text-align: center;
+  color: #c69963;
+  margin-bottom: 15px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Line Below Title */
+.myroom_p-guest-details-container h2::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: #c69963;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Already a Member? Sign-in Line */
+.myroom_p-signin-text {
+  font-size: 2rem; /* Increased text size */
+  color: #b7c7d7;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.myroom_p-signin-text a {
+  color: #c69963;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.myroom_p-signin-text a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Information - Increased Width for Labels and Fields */
+.myroom_p-contact-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 85%; /* Increased width */
+  margin: 25px auto;
+  padding: 0 50px;
+}
+
+/* Increased Size of Labels */
+.myroom_p-contact-info label {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+/* Increased Width for Input Fields */
+.myroom_p-contact-info .form-control {
+  width: 700px;
+  padding: 22px;
+  background-color: #b7c7d7;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 4.2rem;
+}
+
+/* Increased Placeholder Size */
+.myroom_p-contact-info .form-control::placeholder {
+  font-size: 10rem;
+  color: #5a5a5a;
+}
+
+/* Input Focus */
+.myroom_p-contact-info .form-control:focus {
+  outline: none;
+  border: 3px solid #c69963;
+}
+
+/* Submit Button */
+.myroom_p-guest-details-container .btn-primary {
+  background-color: #c69963;
+  color: rgb(44, 61, 79);
+  border: none;
+  padding: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2.2rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.myroom_p-guest-details-container .btn-primary:hover {
+  background-color: #b78343;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .myroom_p-room-info-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .myroom_p-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .myroom_p-room-info {
+    text-align: left;
+  }
+
+  .myroom_p-price-summary {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Responsive Contact Form */
+  .myroom_p-contact-info {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .myroom_p-contact-info label {
+    font-size: 2rem;
+  }
+
+  .myroom_p-contact-info .form-control {
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  .myroom_p-guest-details-container .btn-primary {
+    font-size: 2rem;
+  }
+}

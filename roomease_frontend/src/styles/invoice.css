@@ -1,0 +1,34 @@
+.invoice-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #141c24ff;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.invoice-container h2 {
+  color: #e9e1dd;
+}
+
+.invoice-container p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+.invoice-container button {
+  background-color: transparent;
+  color: #ebe0db;
+  padding: 10px 20px;
+  border: 1px solid #dfd0c9;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.invoice-container button:hover {
+  background-color: #c69963;
+  color: #fff;
+}

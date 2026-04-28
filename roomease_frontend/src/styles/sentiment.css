@@ -1,0 +1,273 @@
+/* ===================================================
+   Sentiment Analysis Styles — RoomEase
+   =================================================== */
+
+/* ── Sentiment Badge ─────────────────────────────── */
+.sent-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.sent-badge.positive { background: rgba(62,207,142,0.15); color: #3ecf8e; border: 1px solid rgba(62,207,142,0.3); }
+.sent-badge.negative { background: rgba(220,85,60,0.15);  color: #ff7a5a; border: 1px solid rgba(220,85,60,0.3); }
+.sent-badge.neutral  { background: rgba(183,199,215,0.12);color: #8da8be; border: 1px solid rgba(183,199,215,0.25); }
+
+/* ── Category tag pills ──────────────────────────── */
+.sent-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 2px;
+}
+.sent-cat-pill.positive { background: rgba(62,207,142,0.12); color: #3ecf8e; }
+.sent-cat-pill.negative { background: rgba(220,85,60,0.12);  color: #ff7a5a; }
+.sent-cat-pill.neutral  { background: rgba(183,199,215,0.08); color: #6d8a9e; }
+
+/* ── Dashboard Page ──────────────────────────────── */
+.sentiment-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  font-family: "Josefin Sans", sans-serif;
+  background: #141c24;
+  min-height: 100vh;
+  color: #b7c7d7;
+}
+.sentiment-page h1 {
+  font-size: 36px;
+  color: #c69963;
+  margin-bottom: 6px;
+}
+.sentiment-page .subtitle {
+  color: #5e7a92;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+/* ── Score Cards Row ─────────────────────────────── */
+.sent-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.sent-stat-card {
+  background: #0f1820;
+  border: 1px solid #2c3d4f;
+  border-radius: 10px;
+  padding: 20px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.sent-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.sent-stat-card.total::before   { background: #c69963; }
+.sent-stat-card.positive::before { background: #3ecf8e; }
+.sent-stat-card.negative::before { background: #ff7a5a; }
+.sent-stat-card.neutral::before  { background: #5e7a92; }
+
+.sent-stat-label { font-size: 11px; font-weight: 700; color: #5e7a92; text-transform: uppercase; letter-spacing: 0.5px; }
+.sent-stat-value { font-size: 40px; font-weight: 700; color: #f4ece1; margin: 4px 0; line-height: 1; }
+.sent-stat-card.positive .sent-stat-value { color: #3ecf8e; }
+.sent-stat-card.negative .sent-stat-value { color: #ff7a5a; }
+.sent-stat-sub { font-size: 12px; color: #3e5568; }
+
+/* ── Two-column grid ─────────────────────────────── */
+.sent-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.sent-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ── Panel ───────────────────────────────────────── */
+.sent-panel {
+  background: #0f1820;
+  border: 1px solid #2c3d4f;
+  border-radius: 10px;
+  padding: 22px 24px;
+}
+.sent-panel-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #c69963;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Satisfaction bar ────────────────────────────── */
+.sat-bar-wrap { margin-bottom: 12px; }
+.sat-bar-label { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 12px; color: #b7c7d7; }
+.sat-bar-track { height: 10px; background: #1e2d3d; border-radius: 8px; overflow: hidden; }
+.sat-bar-fill  { height: 100%; border-radius: 8px; transition: width 0.6s ease; }
+.sat-bar-fill.positive { background: linear-gradient(90deg, #3ecf8e, #27a870); }
+.sat-bar-fill.negative { background: linear-gradient(90deg, #ff7a5a, #d94c2e); }
+.sat-bar-fill.neutral  { background: linear-gradient(90deg, #5e7a92, #3e5568); }
+
+/* ── Keyword frequency chart ─────────────────────── */
+.kw-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.kw-word { font-size: 13px; color: #d0dce8; min-width: 130px; }
+.kw-bar-track { flex: 1; height: 8px; background: #1e2d3d; border-radius: 8px; overflow: hidden; }
+.kw-bar-fill  { height: 100%; border-radius: 8px; }
+.kw-bar-fill.pos { background: #3ecf8e; }
+.kw-bar-fill.neg { background: #ff7a5a; }
+.kw-count { font-size: 12px; color: #5e7a92; min-width: 24px; text-align: right; }
+
+/* ── Recommendation card ─────────────────────────── */
+.rec-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(220,85,60,0.08);
+  border: 1px solid rgba(220,85,60,0.2);
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+.rec-cat  { font-size: 12px; font-weight: 700; color: #ff7a5a; text-transform: uppercase; min-width: 90px; }
+.rec-text { font-size: 12px; color: #b7c7d7; line-height: 1.5; }
+
+/* ── Review items ────────────────────────────────── */
+.sent-review-item {
+  padding: 14px 16px;
+  border: 1px solid #1e2d3d;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  transition: border-color 0.2s;
+}
+.sent-review-item:hover { border-color: #2c3d4f; }
+.sent-review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.sent-review-name  { font-size: 14px; font-weight: 700; color: #f4ece1; }
+.sent-review-stars { font-size: 13px; color: #c69963; letter-spacing: 1px; }
+.sent-review-text  { font-size: 13px; color: #8da8be; margin-bottom: 8px; line-height: 1.6; }
+.sent-review-cats  { display: flex; flex-wrap: wrap; gap: 4px; }
+.sent-review-date  { font-size: 11px; color: #3e5568; margin-top: 6px; }
+
+/* ── Donut / circle stats ────────────────────────── */
+.sent-donut-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 16px 0;
+}
+.sent-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #1e2d3d;
+  position: relative;
+}
+.sent-circle.positive { border-color: #3ecf8e; }
+.sent-circle.negative { border-color: #ff7a5a; }
+.sent-circle.neutral  { border-color: #5e7a92; }
+.sent-circle-pct   { font-size: 26px; font-weight: 700; }
+.sent-circle.positive .sent-circle-pct { color: #3ecf8e; }
+.sent-circle.negative .sent-circle-pct { color: #ff7a5a; }
+.sent-circle.neutral  .sent-circle-pct { color: #5e7a92; }
+.sent-circle-label { font-size: 11px; color: #5e7a92; text-transform: uppercase; margin-top: 2px; }
+
+/* ── Score meter ─────────────────────────────────── */
+.score-meter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+}
+.score-track {
+  flex: 1;
+  height: 12px;
+  background: #1e2d3d;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.score-fill {
+  position: absolute;
+  height: 100%;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+}
+.score-label-left, .score-label-right {
+  font-size: 11px;
+  color: #3e5568;
+  white-space: nowrap;
+}
+
+/* ── Admin button ────────────────────────────────── */
+.sentiment-admin-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 32px;
+  background: linear-gradient(135deg, #3ecf8e, #27a870);
+  color: #141c24;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 22px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(62,207,142,0.3);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sentiment-admin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(62,207,142,0.4);
+}
+
+/* Overall sentiment label */
+.overall-sentiment-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.overall-sentiment-label.positive { background: rgba(62,207,142,0.15); color: #3ecf8e; border: 1px solid rgba(62,207,142,0.3); }
+.overall-sentiment-label.negative { background: rgba(220,85,60,0.15);  color: #ff7a5a; border: 1px solid rgba(220,85,60,0.3); }
+.overall-sentiment-label.neutral  { background: rgba(183,199,215,0.1);  color: #8da8be; border: 1px solid rgba(183,199,215,0.2); }

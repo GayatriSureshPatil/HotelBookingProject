@@ -1,0 +1,26 @@
+{
+  "season": "High",
+  "localEvent": false,
+  "isWeekend": true,
+  "deluxe_room_demand": 97,
+  "standard_room_demand": 100,
+  "suite_room_demand": 95,
+  "competitorPrice": 2303.9,
+  "temperature": 27.2,
+  "deluxe_occupancy_rate": 0,
+  "standard_occupancy_rate": 0,
+  "suite_occupancy_rate": 0,
+  "holidays": [
+    "2025-01-26",
+    "2025-03-17",
+    "2025-08-15",
+    "2025-10-02",
+    "2025-10-20",
+    "2025-11-01",
+    "2025-12-25",
+    "2026-01-01",
+    "2026-01-26",
+    "2026-08-15",
+    "2026-12-25"
+  ]
+}

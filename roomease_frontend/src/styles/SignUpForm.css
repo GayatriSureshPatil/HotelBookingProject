@@ -1,0 +1,129 @@
+/* Apply background pattern only to the signup page */
+/* Apply background pattern only to the signup page */
+.signup-page {
+  background-color: #c69963;
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10%),
+    radial-gradient(circle, transparent 10%, rgba(255, 255, 255, 0.3) 10%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+/* Centering the form */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem; /* Reduced padding */
+  background-color: white;
+  max-width: 720px; /* Slightly decreased width */
+  width: 85%;
+  min-height: 600px; /* Adjusted height */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Headings */
+.signup-h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Form */
+.signup-form {
+  width: 100%;
+}
+
+.signup-form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.signup-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.8rem;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.signup-form-group label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Input fields */
+.signup-form-group input {
+  padding: 1.1rem;
+  font-size: 1.1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.signup-form-group input:focus {
+  border-color: #c69963;
+  box-shadow: 0 0 8px rgba(198, 153, 99, 0.5);
+}
+
+/* Button */
+.signup-button {
+  padding: 1.1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #c69963, #b08052);
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+  background: linear-gradient(to right, #b08052, #9a6b45);
+  transform: scale(1.05);
+}
+
+.signup-message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 2rem;
+    max-width: 90%;
+    min-height: auto;
+  }
+
+  .signup-h2 {
+    font-size: 2rem;
+  }
+
+  .signup-form-row {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .signup-form-group label {
+    font-size: 1rem;
+  }
+}

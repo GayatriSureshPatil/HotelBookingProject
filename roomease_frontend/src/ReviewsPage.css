@@ -1,0 +1,204 @@
+/* :root {
+  --bg-color: #141c24ff;
+  --bg-transparent: #141c247f;
+  --border-color: #2c3d4f;
+  --text-color: #b7c7d7;
+  --heading-color: #f4ece1;
+  --active-btn: #3c546cff;
+  --card-color: #d8b48a
+  --hover-btn: #c69963;
+} */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Reviews Page Container */
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  /* background: linear-gradient(
+    to right,
+    #141c247f,
+    #c69963
+  ); */
+  background-color: #141c247f;
+  padding: 40px;
+  backdrop-filter: blur(5px);
+}
+
+/* Review Card */
+.review-card {
+  /* background: #f4ece1; */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  border: 1px solid #2c3d4f;
+  padding: 40px;
+  width: 90%;
+  max-width: 550px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  color: #b7c7d7;
+  margin-bottom: 40px;
+}
+
+.review-card:hover {
+  transform: scale(1.02);
+}
+
+/* Title */
+.review-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #c69963;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Input Fields */
+.review-input-field,
+.review-textarea-field {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #3c546cff;
+  border-radius: 4px;
+  font-size: 17px;
+  transition: all 0.3s ease-in-out;
+  /* background-color: #b7c7d7; */
+  color: #333;
+}
+
+/* Placeholder Styling */
+.review-input-field::placeholder,
+.review-textarea-field::placeholder {
+  color: #141c247f !important;
+  font-size: 15px;
+}
+
+/* Input Focus Effect */
+.review-input-field:focus,
+.review-textarea-field:focus {
+  border-color: #c69963;
+  outline: none;
+  box-shadow: 0px 0px 8px #c69963;
+}
+
+/* Star Rating System */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s;
+  color: #3c546cff;
+}
+
+.star:hover,
+.star.filled {
+  color: #c69963;
+  transform: scale(1.15);
+}
+
+/* Submit Button */
+.review-submit-btn {
+  width: 100%;
+  background: #c69963;
+  color: #f4ece1;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.review-submit-btn:hover {
+  background: #c69963;
+  transform: scale(1.05);
+}
+
+/* Reviews List Container */
+.reviews-list {
+  width: 90%;
+  max-width: 1200px;
+  padding: 32px;
+  border-radius: 4px;
+  border: 2px solid #2c3d4f;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+}
+
+/* Reviews Heading */
+.reviews-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #c69963;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout for Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Review Card */
+.review-item {
+  background: #fff;
+  border: 1px solid #3c546cff;
+  border-radius: 4px;
+  padding: 24px;
+  transition: transform 0.3s ease;
+}
+
+.review-item:hover {
+  transform: scale(1.02);
+}
+
+/* Review Item Title */
+.review-item h3 {
+  font-size: 20px;
+  color: #c69963;
+  margin-bottom: 10px;
+}
+
+/* Review Stars */
+.review-item .stars {
+  font-size: 20px;
+  color: #c69963;
+  margin-bottom: 10px;
+}
+
+/* Review Text */
+.review-item p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Review Date */
+.review-item small {
+  font-size: 14px;
+  color: #3c546cff;
+}

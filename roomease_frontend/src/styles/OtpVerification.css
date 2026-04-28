@@ -1,0 +1,222 @@
+/* Overall container for centering the card */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #141c24;
+  padding: 20px;
+}
+.otp-logo {
+  display: block;
+  margin: 0 auto;
+  width: 80px; /* Adjust as needed */
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Centering and styling the message container */
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* Message box */
+.message-box {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Icons */
+.icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Success message style */
+.success {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  border: 2px solid #2e7d32;
+  box-shadow: 0 0 10px #4caf50;
+  animation: bounce 0.6s ease-in-out;
+}
+
+/* Error message style */
+.error {
+  background: linear-gradient(135deg, #ff4d4d, #ff8080);
+  color: white;
+  border: 2px solid #d32f2f;
+  box-shadow: 0 0 10px #ff4d4d;
+  animation: shake 0.6s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bounce effect for success */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Shake effect for error */
+@keyframes shake {
+  0% {
+    transform: translateX(-5px);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Styling for the card */
+.otp-card {
+  background-color: #1e2833;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Title Styling */
+.otp-card h2 {
+  color: #c69963;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* OTP input container */
+.otp-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Styling for each OTP input */
+.otp-input {
+  width: 45px;
+  height: 50px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 2px solid #c69963;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect for OTP input */
+.otp-input:focus {
+  outline: none;
+  border-color: #b38253;
+  box-shadow: 0 0 8px #c69963;
+}
+
+/* Button styling */
+.otp-btn {
+  padding: 12px;
+  background-color: #c69963;
+  color: #141c24;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.otp-btn:hover {
+  background-color: #b38253;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Resend OTP Button */
+.resend-otp-btn {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: transparent;
+  color: #c69963;
+  border: 2px solid #c69963;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.resend-otp-btn:hover {
+  background-color: #c69963;
+  color: #141c24;
+}
+
+.resend-otp-btn:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Message Styling */
+.otp-p {
+  margin-top: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .card {
+    padding: 20px;
+  }
+
+  .otp-input {
+    width: 40px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .otp-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
