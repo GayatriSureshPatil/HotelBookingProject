@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/dynamic_pricing.css';
+import '../../styles/dynamic_pricing.css';
 
 /**
  * PricingBadge — compact badge shown on room cards.

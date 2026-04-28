@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../styles/dynamic_pricing.css';
+import '../../styles/dynamic_pricing.css';
 
 const API = 'http://127.0.0.1:8000/ramkrishna/lodging/pricing';
 

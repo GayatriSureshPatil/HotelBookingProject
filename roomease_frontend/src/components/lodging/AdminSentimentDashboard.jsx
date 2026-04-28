@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../styles/sentiment.css";
+import "../../styles/sentiment.css";
 
 const AdminSentimentDashboard = () => {
   const [data, setData] = useState(null);
