@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: roomease_db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ramkrishna_my
+      MYSQL_USER: gayatri
+      MYSQL_PASSWORD: 23052006
+    volumes:
+      - db_data:/var/lib/mysql
+      # Initialize DB with the existing schema
+      - ./roomease_backend/database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  backend:
+    build: ./roomease_backend
+    container_name: roomease_backend
+    ports:
+      - "8000:8000"
+    environment:
+      # Database connection variables overriding the local ones
+      # The frontend expects these keys; passing them via env mapping
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID:-rzp_test_ypUZQmsPpyZrAR}
+      RAZORPAY_SECRET: ${RAZORPAY_SECRET:-bmKNzqhEa6b1SBoQu3NxJe4t}
+    depends_on:
+      - db
+
+  frontend:
+    build: ./roomease_frontend
+    container_name: roomease_frontend
+    ports:
+      - "5173:5173"
+    environment:
+      # If frontend relies on process.env in dev mode
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID:-rzp_test_ypUZQmsPpyZrAR}
+      RAZORPAY_SECRET: ${RAZORPAY_SECRET:-bmKNzqhEa6b1SBoQu3NxJe4t}
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
